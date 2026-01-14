@@ -1,0 +1,351 @@
+/* =============================================================================
+Haltman Static Template - TERMINAL/OLD-SCHOOL THEME
+Goal: keep the semantic structure, but restore a CLI/terminal vibe.
+- Monospace-first
+- No glass/blur, no pill buttons, no heavy card surfaces
+- ASCII-ish section headers ("> TITLE -------------")
+- Minimal borders, minimal decoration
+============================================================================= */
+
+/* -----------------------------
+  1) Theme tokens (edit here)
+-------------------------------- */
+:root{
+  /* Typography */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-body: var(--font-mono);
+
+  /* Font sizes (terminal-ish, conservative) */
+  --fs-0: 0.82rem;   /* small */
+  --fs-1: 0.95rem;   /* base */
+  --fs-2: 1.05rem;   /* lead */
+  --fs-3: clamp(1.6rem, 1.25rem + 1.2vw, 2.25rem); /* h1 */
+
+  --lh-body: 1.6;
+
+  /* Spacing (tight, like a console UI) */
+  --space-1: 0.4rem;
+  --space-2: 0.65rem;
+  --space-3: 0.9rem;
+  --space-4: 1.2rem;
+  --space-5: 1.8rem;
+  --space-6: 2.6rem;
+
+  /* Colors (semantic) */
+  --c-bg: #0c0c0d;
+  --c-text: #e8e8e8;
+  --c-muted: #a0a0a0;
+  --c-border: #2b2b2f;
+
+  /* Accents */
+  --c-accent: #ffe600; /* headings */
+  --c-link: #00ff80;   /* links */
+  --c-danger: #dc143c; /* warnings */
+  --c-focus: #86b7ff;  /* focus ring */
+
+  /* Shapes */
+  --radius: 0px; /* keep it sharp */
+}
+
+/* -----------------------------
+  2) Base reset + defaults
+-------------------------------- */
+*{ box-sizing: border-box; }
+html{ -webkit-text-size-adjust: 100%; }
+body{
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--fs-1);
+  line-height: var(--lh-body);
+  color: var(--c-text);
+  background: var(--c-bg);
+  min-height: 100svh;
+
+  /* Layout: footer will never overlap content */
+  display: flex;
+  flex-direction: column;
+}
+
+img, svg, video{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a{
+  color: var(--c-link);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+a:hover{ text-decoration: underline; }
+a:focus-visible{
+  outline: 2px solid var(--c-focus);
+  outline-offset: 3px;
+}
+
+code, pre, kbd{ font-family: var(--font-mono); }
+pre{
+  margin: var(--space-3) 0;
+  padding: var(--space-3);
+  border: 1px solid var(--c-border);
+  background: #09090a;
+  overflow: auto;
+}
+
+/* -----------------------------
+  3) Layout primitives
+-------------------------------- */
+.wrap{
+  width: min(900px, calc(100% - 2*var(--space-4)));
+  margin-inline: auto;
+}
+
+/* -----------------------------
+  4) Header / Navbar (old-school)
+-------------------------------- */
+.site-header{
+  border-bottom: 1px solid var(--c-border);
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  justify-content: flex-start;
+}
+
+/* Brand: simple */
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--c-text);
+  text-decoration: none;
+}
+.brand__name{
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* (optional) icon variants */
+.brand__icon{ width: 18px; height: 18px; color: var(--c-accent); }
+.brand__img{
+  width: 18px; height: 18px;
+  border: 1px solid var(--c-border);
+  background: #09090a;
+}
+
+/* Links */
+.nav__links{
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.nav__link{
+  color: var(--c-text);
+  font-size: var(--fs-0);
+  padding: 0; /* keep it raw */
+}
+.nav__link[aria-current="page"]{
+  color: var(--c-accent);
+}
+
+/* -----------------------------
+  5) Page structure
+-------------------------------- */
+main{
+  flex: 1;
+  padding: var(--space-6) 0;
+}
+
+.hero{
+  text-align: center;
+  padding: 0 0 var(--space-4);
+}
+.hero__title{
+  font-size: var(--fs-3);
+  line-height: 1.1;
+  margin: 0;
+  font-weight: 800;
+}
+.hero__kicker{
+  margin: var(--space-2) 0 0;
+  color: var(--c-muted);
+  font-size: var(--fs-1);
+}
+
+.hr{
+  border-top: 1px solid var(--c-border);
+  margin: var(--space-4) 0;
+}
+
+.section{
+  margin-top: var(--space-5);
+}
+
+/* Terminal header line:
+   > TITLE ------------------------------------------------------------- */
+.section__head{
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-0);
+  letter-spacing: 0.8px;
+  margin: 0 0 var(--space-2);
+  text-transform: uppercase;
+}
+.section__marker{
+  color: var(--c-accent);
+}
+.section__head::after{
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--c-border);
+  opacity: 0.9;
+  margin-left: var(--space-2);
+}
+
+.prose p{ margin: 0 0 var(--space-3); }
+.prose .muted{ color: var(--c-muted); }
+
+.list{
+  margin: 0;
+  padding-left: 1.15rem;
+}
+.list li{ margin: 0.35rem 0; }
+
+/* -----------------------------
+  6) Disclaimer (less "modern")
+-------------------------------- */
+.callout{
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+.callout__title{
+  margin: 0 0 var(--space-2);
+  color: var(--c-danger);
+  font-size: var(--fs-0);
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+.callout__title::before{
+  content: "!";
+  margin-right: 0.45rem;
+}
+
+/* -----------------------------
+  7) Blog components (terminal cards)
+-------------------------------- */
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-3);
+}
+.card{
+  grid-column: span 12;
+  border: 1px dashed var(--c-border);
+  background: transparent;
+  padding: var(--space-3);
+}
+@media (min-width: 760px){
+  .card{ grid-column: span 6; }
+}
+.card__title{
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card__meta{
+  margin: 0.35rem 0 0;
+  color: var(--c-muted);
+  font-size: var(--fs-0);
+}
+.card__desc{
+  margin: var(--space-2) 0 0;
+  color: var(--c-text);
+}
+
+/* Post content */
+.post{
+  width: min(860px, 100%);
+  margin: 0 auto;
+}
+.post h1{
+  font-size: clamp(1.7rem, 1.3rem + 1.6vw, 2.5rem);
+  margin: 0 0 var(--space-2);
+  line-height: 1.15;
+}
+.post .post__meta{
+  color: var(--c-muted);
+  font-size: var(--fs-0);
+  margin-bottom: var(--space-4);
+}
+.post h2{
+  margin: var(--space-5) 0 var(--space-2);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.post p{ margin: 0 0 var(--space-3); }
+.post blockquote{
+  margin: var(--space-4) 0;
+  padding: var(--space-3);
+  border-left: 2px solid var(--c-accent);
+  border-right: 1px solid var(--c-border);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+  background: transparent;
+}
+
+/* -----------------------------
+  8) Media / embeds
+-------------------------------- */
+.figure{
+  margin: var(--space-4) 0;
+}
+.figure img{
+  border: 1px solid var(--c-border);
+}
+.figure figcaption{
+  margin-top: var(--space-2);
+  color: var(--c-muted);
+  font-size: var(--fs-0);
+}
+
+.embed{
+  margin: var(--space-4) 0;
+  border: 1px solid var(--c-border);
+  background: #09090a;
+  aspect-ratio: 16 / 9;
+}
+.embed iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+/* -----------------------------
+  9) Footer
+-------------------------------- */
+.site-footer{
+  border-top: 1px solid var(--c-border);
+  padding: var(--space-3) 0;
+  color: var(--c-muted);
+  font-size: var(--fs-0);
+  text-align: center;
+}
+.site-footer a{ color: var(--c-text); }
+
+/* -----------------------------
+  10) Utilities
+-------------------------------- */
+.u-mono{ font-family: var(--font-mono); }
+.u-muted{ color: var(--c-muted); }
+.u-accent{ color: var(--c-accent); }
+.u-danger{ color: var(--c-danger); }
+.u-center{ text-align: center; }

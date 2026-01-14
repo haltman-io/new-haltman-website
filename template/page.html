@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Haltman — About</title>
+  <meta name="description" content="Common content page example." />
+
+  <!-- Theme -->
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0f0f10" />
+
+  <!-- Fonts (edit here if you want to swap the identity) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Outfit:wght@200..900&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <!-- =========================================================================
+    Header / Navbar
+    - Sticky (not fixed) so it behaves like a normal website.
+    - Use aria-current="page" on the active link.
+  ========================================================================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <!-- Logo examples:
+          A) text only (default below)
+          B) inline SVG icon + text
+          C) image logo + text
+        -->
+        <a class="brand" href="./index.html">
+          <!-- B) Inline SVG icon example (uncomment if you want an icon)
+          <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2l7 4v6c0 5-3 9-7 10C8 21 5 17 5 12V6l7-4z"/>
+          </svg>
+          -->
+          <!-- C) Image logo example (uncomment if you have ./assets/logo.svg)
+          <img class="brand__img" src="./assets/logo.svg" alt="Haltman logo" />
+          -->
+          <span class="brand__name">haltman</span>
+        </a>
+
+        <div class="nav__links">
+          <a class="nav__link" href="./index.html" >[home]</a>
+          <a class="nav__link" href="./page.html" aria-current="page">[about]</a>
+          <a class="nav__link" href="./blog.html" >[blog]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <h1 class="hero__title">About</h1>
+        <p class="hero__kicker">A common content page (sections + media examples).</p>
+      </section>
+
+      <div class="hr"></div>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> SECTION TITLE</h2>
+        <div class="prose">
+          <p>Use paragraphs for readable text. Avoid long unbroken lines.</p>
+          <p class="muted">Use <span class="u-mono">.muted</span> for secondary info.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> IMAGES / GIF</h2>
+        <div class="prose">
+          <figure class="figure">
+            <img src="./assets/demo-image.png" alt="Example image placeholder" loading="lazy" />
+            <figcaption>Optional caption. Replace <span class="u-mono">demo-image.png</span> with your asset.</figcaption>
+          </figure>
+
+          <p class="muted">Tip: for GIFs, use <span class="u-mono">&lt;img&gt;</span> too. Keep them under control (size matters).</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> YOUTUBE EMBED</h2>
+        <div class="prose">
+          <div class="embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+              title="Example video"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="muted">Use <span class="u-mono">youtube-nocookie.com</span> if you want a more privacy-friendly default.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> TWITTER/X EMBED (OPTIONAL)</h2>
+        <div class="prose">
+          <p class="muted">Twitter embeds require external JS. Keep it optional.</p>
+          <pre><code>&lt;blockquote class="twitter-tweet"&gt;
+  &lt;a href="https://twitter.com/user/status/ID"&gt;&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+    Footer
+    - No absolute positioning => never overlaps content on small screens.
+  ========================================================================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="u-mono">powered by</span> <a href="https://www.haltman.io/">haltman.io</a>
+      <span class="u-muted"> • </span>
+      <span class="u-muted">static template v1</span>
+    </div>
+  </footer>
+</body>
+</html>

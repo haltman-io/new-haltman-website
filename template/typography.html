@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Haltman Template — Style Guide (typography.html)</title>
+  <meta name="description" content="Style Guide + documentation + examples for the Haltman static template." />
+
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0c0c0d" />
+
+  <!--
+    IMPORTANT:
+    - This file assumes you have the template folder structure:
+      ./assets/style.css
+    - If you place this elsewhere, update the href accordingly.
+  -->
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+
+<body>
+  <!-- =========================================================================
+    STYLE GUIDE NAVBAR
+    - Keep it bracket-style like a terminal menu.
+    - aria-current="page" marks the active link.
+  ========================================================================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="./index.html">
+          <span class="brand__name">haltman</span>
+        </a>
+
+        <div class="nav__links">
+          <a class="nav__link" href="./index.html">[home]</a>
+          <a class="nav__link" href="./page.html">[about]</a>
+          <a class="nav__link" href="./blog.html">[blog]</a>
+          <a class="nav__link" href="./typography.html" aria-current="page">[style-guide]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <!-- =========================================================================
+        HERO
+      ========================================================================= -->
+      <section class="hero">
+        <h1 class="hero__title">Style Guide</h1>
+        <p class="hero__kicker">Documentation + examples for typography, colors, components, and embeds.</p>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        TABLE OF CONTENTS
+      ========================================================================= -->
+      <section class="section" id="toc">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> TABLE OF CONTENTS</h2>
+        <div class="prose">
+          <ul class="list">
+            <li><a href="#tokens">Tokens (variables)</a></li>
+            <li><a href="#type">Typography</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#dividers">Dividers</a></li>
+            <li><a href="#callouts">Callouts / Disclaimer</a></li>
+            <li><a href="#cards">Cards (blog list)</a></li>
+            <li><a href="#post">Post content (article)</a></li>
+            <li><a href="#media">Images / GIF</a></li>
+            <li><a href="#embeds">Embeds (YouTube / Twitter)</a></li>
+            <li><a href="#accessibility">Accessibility notes</a></li>
+          </ul>
+          <p class="muted">This page is intentionally verbose. It's your “single source of truth” for the template.</p>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        TOKENS
+      ========================================================================= -->
+      <section class="section" id="tokens">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> TOKENS (VARIABLES)</h2>
+        <div class="prose">
+          <p>All key values live in <span class="u-mono">assets/style.css</span> inside <span class="u-mono">:root</span>.</p>
+          <p class="muted">Edit these first. Don't “paint” with random colors across HTML.</p>
+
+          <pre><code>/* Theme tokens (edit here) */
+:root{
+  --font-body: ui-monospace, ...;
+  --fs-1: 0.95rem;
+  --space-4: 1.2rem;
+
+  --c-bg: #0c0c0d;
+  --c-text: #e8e8e8;
+  --c-muted: #a0a0a0;
+  --c-border: #2b2b2f;
+
+  --c-accent: #ffe600; /* headings */
+  --c-link:   #00ff80; /* links */
+  --c-danger: #dc143c; /* warnings */
+}</code></pre>
+
+          <p><span class="u-accent">Accent</span>, <a href="#links">Links</a>, and <span class="u-danger">Danger</span> colors are semantic. Use them consistently.</p>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        TYPOGRAPHY
+      ========================================================================= -->
+      <section class="section" id="type">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> TYPOGRAPHY</h2>
+        <div class="prose">
+          <p><strong>Rule:</strong> one <span class="u-mono">&lt;h1&gt;</span> per page. Section headings use <span class="u-mono">.section__head</span>.</p>
+
+          <h1 class="u-mono" style="margin: 0 0 0.75rem;">Heading 1 (example)</h1>
+          <p class="muted">In real pages, your H1 is usually inside the <span class="u-mono">.hero</span> block.</p>
+
+          <h2 class="u-mono" style="margin: 1.2rem 0 0.6rem;">Heading 2 (example)</h2>
+          <p>Paragraph text. Keep it readable. Avoid walls of text with no breaks.</p>
+
+          <p class="muted">Muted paragraph for secondary info. Use this for hints, footnotes, or metadata.</p>
+
+          <blockquote>
+            Blockquote example. Use it for short “terminal-style” quotes, rules, or callouts inside posts.
+          </blockquote>
+
+          <pre><code># Code block example
+curl -fsSL https://example.org/install.sh | sh</code></pre>
+
+          <p>Inline <code>code</code> example. Keep inline code short and meaningful.</p>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        LINKS
+      ========================================================================= -->
+      <section class="section" id="links">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> LINKS</h2>
+        <div class="prose">
+          <p>Links are neon green by default and underlined on hover.</p>
+          <ul class="list">
+            <li><a href="#">Standard link</a></li>
+            <li><a href="#" aria-label="Example link with label">Accessible link with aria-label</a></li>
+            <li><a href="mailto:root@haltman.io">mailto link</a></li>
+          </ul>
+
+          <p class="muted">
+            If you need “button behavior”, keep it link-like (terminal vibe).
+            Avoid pill buttons unless you explicitly want a modern feel.
+          </p>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        LISTS
+      ========================================================================= -->
+      <section class="section" id="lists">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> LISTS</h2>
+        <div class="prose">
+          <p>Use lists for scannability. Keep items short.</p>
+
+          <ul class="list">
+            <li>Unordered list item</li>
+            <li>Another item with <a href="#">a link</a></li>
+            <li>Item with <span class="u-muted">muted</span> notes</li>
+          </ul>
+
+          <ol class="list">
+            <li>Ordered list item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ol>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        DIVIDERS
+      ========================================================================= -->
+      <section class="section" id="dividers">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> DIVIDERS</h2>
+        <div class="prose">
+          <p>Use the <span class="u-mono">.hr</span> component instead of stacking <span class="u-mono">&lt;br&gt;&lt;hr&gt;&lt;br&gt;</span>.</p>
+          <div class="hr"></div>
+          <p class="muted">That divider above is a reusable component.</p>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        CALLOUTS / DISCLAIMER
+      ========================================================================= -->
+      <section class="section" id="callouts">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> CALLOUTS / DISCLAIMER</h2>
+        <div class="prose">
+          <p>Callouts are intentionally minimal to preserve the terminal vibe.</p>
+
+          <div class="callout">
+            <p class="callout__title">NOTICE</p>
+            <div class="prose">
+              <p>We are not affiliated with any other group.</p>
+              <p class="muted">This is a warning label, not a “modern card”.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        CARDS (BLOG LIST)
+      ========================================================================= -->
+      <section class="section" id="cards">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> CARDS (BLOG LIST)</h2>
+        <div class="prose">
+          <p>Cards are intentionally raw: dashed borders, no big surfaces.</p>
+
+          <div class="card-grid" role="list">
+            <article class="card" role="listitem">
+              <h3 class="card__title"><a href="./post.html">Post title example</a></h3>
+              <p class="card__meta">YYYY-MM-DD • 4 min read</p>
+              <p class="card__desc">Short summary. One or two lines max.</p>
+            </article>
+
+            <article class="card" role="listitem">
+              <h3 class="card__title"><a href="./post.html">Second post example</a></h3>
+              <p class="card__meta">YYYY-MM-DD • 7 min read</p>
+              <p class="card__desc">Another short summary, scannable and direct.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        POST CONTENT (ARTICLE)
+      ========================================================================= -->
+      <section class="section" id="post">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> POST CONTENT (ARTICLE)</h2>
+        <div class="prose">
+          <p>Use the <span class="u-mono">.post</span> wrapper on blog post pages.</p>
+
+          <article class="post" aria-labelledby="demo-post-title">
+            <h1 id="demo-post-title">Demo Post Title</h1>
+            <p class="post__meta">YYYY-MM-DD • Category: Notes • Author: Haltman</p>
+
+            <p>First paragraph. Define scope. No fluff. This is a template.</p>
+
+            <h2>Section Heading</h2>
+            <p>Explain what matters. Then show the proof.</p>
+
+            <blockquote>
+              Keep your UI predictable. Visual noise is cognitive debt.
+            </blockquote>
+
+            <h2>Code Example</h2>
+            <pre><code># Example snippet
+echo "hello world"</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        MEDIA (IMAGES / GIF)
+      ========================================================================= -->
+      <section class="section" id="media">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> IMAGES / GIF</h2>
+        <div class="prose">
+          <p>Use <span class="u-mono">&lt;figure&gt;</span> so you can include a caption (optional).</p>
+
+          <figure class="figure">
+            <img src="./assets/demo-image.png" alt="Example image placeholder" loading="lazy" />
+            <figcaption>Caption example. Replace <span class="u-mono">demo-image.png</span> with your real asset.</figcaption>
+          </figure>
+
+          <p class="muted">
+            GIFs: same pattern. Keep the filesize reasonable.
+            Prefer short loops and compress them.
+          </p>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        EMBEDS
+      ========================================================================= -->
+      <section class="section" id="embeds">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> EMBEDS</h2>
+        <div class="prose">
+          <h3 class="u-mono" style="margin: 0 0 0.6rem;">YouTube (responsive)</h3>
+          <div class="embed">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
+              title="Example video"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="muted">Use <span class="u-mono">youtube-nocookie.com</span> for a more privacy-friendly default.</p>
+
+          <h3 class="u-mono" style="margin: 1.2rem 0 0.6rem;">Twitter/X (optional)</h3>
+          <p class="muted">Twitter embeds require external JS. Keep it optional.</p>
+          <pre><code>&lt;blockquote class="twitter-tweet"&gt;
+  &lt;a href="https://twitter.com/user/status/ID"&gt;&lt;/a&gt;
+&lt;/blockquote&gt;
+&lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <!-- =========================================================================
+        ACCESSIBILITY NOTES
+      ========================================================================= -->
+      <section class="section" id="accessibility">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> ACCESSIBILITY NOTES</h2>
+        <div class="prose">
+          <ul class="list">
+            <li>Use <span class="u-mono">alt</span> text for images. Describe content, not file names.</li>
+            <li>Keep link text meaningful: “Read the post” beats “click here”.</li>
+            <li>Focus rings are enabled via <span class="u-mono">:focus-visible</span>. Don’t remove them.</li>
+            <li>Prefer semantic HTML (<span class="u-mono">&lt;header&gt;</span>, <span class="u-mono">&lt;main&gt;</span>, <span class="u-mono">&lt;footer&gt;</span>, <span class="u-mono">&lt;article&gt;</span>).</li>
+          </ul>
+
+          <p class="muted">
+            This guide exists so nobody has to edit the site “on vibes”.
+            When in doubt, copy a pattern from this file.
+          </p>
+
+          <p><a href="#toc">Back to TOC</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="u-mono">powered by</span> <a href="https://www.haltman.io/">haltman.io</a>
+      <span class="u-muted"> • </span>
+      <span class="u-muted">style guide</span>
+    </div>
+  </footer>
+</body>
+</html>

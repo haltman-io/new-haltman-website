@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Haltman — Post</title>
+  <meta name="description" content="Blog post content example." />
+
+  <!-- Theme -->
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0f0f10" />
+
+  <!-- Fonts (edit here if you want to swap the identity) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Outfit:wght@200..900&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <!-- =========================================================================
+    Header / Navbar
+    - Sticky (not fixed) so it behaves like a normal website.
+    - Use aria-current="page" on the active link.
+  ========================================================================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <!-- Logo examples:
+          A) text only (default below)
+          B) inline SVG icon + text
+          C) image logo + text
+        -->
+        <a class="brand" href="./index.html">
+          <!-- B) Inline SVG icon example (uncomment if you want an icon)
+          <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2l7 4v6c0 5-3 9-7 10C8 21 5 17 5 12V6l7-4z"/>
+          </svg>
+          -->
+          <!-- C) Image logo example (uncomment if you have ./assets/logo.svg)
+          <img class="brand__img" src="./assets/logo.svg" alt="Haltman logo" />
+          -->
+          <span class="brand__name">haltman</span>
+        </a>
+
+        <div class="nav__links">
+          <a class="nav__link" href="./index.html" >[home]</a>
+          <a class="nav__link" href="./page.html" >[about]</a>
+          <a class="nav__link" href="./blog.html" aria-current="page">[blog]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <article class="post" aria-labelledby="post-title">
+        <h1 id="post-title">How we ship privacy-first tooling</h1>
+        <p class="post__meta">2025-12-28 • Category: Notes • Author: Haltman</p>
+
+        <p>This is a blog post template. Use it for real writing, not placeholder bullet spam.</p>
+
+        <h2>Principles</h2>
+        <p>Explain the "why" first. Then show the "how".</p>
+
+        <blockquote>
+          Keep your UI predictable. Visual noise is cognitive debt.
+        </blockquote>
+
+        <h2>Code block example</h2>
+        <pre><code># Example shell snippet
+curl -fsSL https://example.org/install.sh | sh</code></pre>
+
+        <h2>Image example</h2>
+        <figure class="figure">
+          <img src="./assets/demo-image.png" alt="Example image placeholder" loading="lazy" />
+          <figcaption>Caption with context. Not required, but useful.</figcaption>
+        </figure>
+
+        <p class="u-muted">End the post with a clear link to the next action.</p>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+    Footer
+    - No absolute positioning => never overlaps content on small screens.
+  ========================================================================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="u-mono">powered by</span> <a href="https://www.haltman.io/">haltman.io</a>
+      <span class="u-muted"> • </span>
+      <span class="u-muted">static template v1</span>
+    </div>
+  </footer>
+</body>
+</html>

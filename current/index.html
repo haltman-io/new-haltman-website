@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Primary SEO -->
+  <title>Haltman.io — Independent Brazilian Hackers | Privacy, Free Software & Infrastructure</title>
+
+  <meta name="description"
+    content="Haltman.io is an independent group of Brazilian hackers. Friends for over a decade, building public, privacy-first infrastructure and free software. No hype. No funding. No contracts." />
+
+  <meta name="keywords"
+    content="Haltman, haltman.io, Brazilian hackers, hacker collective, hacker ethic, free software, privacy, privacy-first, mail forwarding, email aliases, secure notes, cybersecurity, offensive security, infrastructure, independent hackers, haltman-io" />
+
+  <meta name="author" content="Haltman.io" />
+
+  <!-- Indexing -->
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Theme -->
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0f0f10" />
+
+  <!-- Canonical & Sitemaps -->
+  <link rel="canonical" href="https://haltman.io/" />
+  <link rel="sitemap" type="application/xml" title="Sitemap (Blog)" href="https://blog.haltman.io/sitemap.xml" />
+  <link rel="sitemap" type="application/xml" title="Sitemap (Docs)" href="https://docs.haltman.io/sitemap.xml" />
+
+  <!-- Open Graph (WhatsApp, Telegram, Discord, Mastodon, LinkedIn) -->
+  <meta property="og:site_name" content="Haltman.io" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Haltman.io — Independent Brazilian Hackers" />
+  <meta property="og:description"
+    content="An independent Brazilian hacker group. Built by long-time friends. We publish public, privacy-first infrastructure and free software. No affiliation. No hiring. No compromise." />
+  <meta property="og:url" content="https://haltman.io/" />
+  <meta property="og:image" content="https://haltman.io/og.png" />
+  <meta property="og:image:alt" content="Haltman.io — Independent Brazilian Hackers" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Haltman.io — Independent Brazilian Hackers" />
+  <meta name="twitter:description"
+    content="Independent Brazilian hackers. Friends for 10+ years. Public infrastructure, privacy-first services, free software. No hype. No funding. No contracts." />
+  <meta name="twitter:image" content="https://haltman.io/og.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Outfit:wght@200..900&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/style.css" />
+
+  <!-- Icons / PWA -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://haltman.io/#org",
+        "name": "Haltman.io",
+        "url": "https://haltman.io/",
+        "description": "Independent Brazilian hacker collective focused on privacy, free software and public infrastructure.",
+        "email": "abuse@haltman.io",
+        "sameAs": [
+          "https://github.com/haltman-io",
+          "https://t.me/haltman_group"
+        ],
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "abuse",
+            "email": "abuse@haltman.io"
+          }
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://haltman.io/#website",
+        "url": "https://haltman.io/",
+        "name": "Haltman.io",
+        "publisher": { "@id": "https://haltman.io/#org" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://forward.haltman.io/#app",
+        "name": "Haltman Free Mail Forwarding",
+        "url": "https://forward.haltman.io/",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "description": "Free mail forwarding service. Create aliases like handle@domain and forward mail without surveillance or tracking.",
+        "publisher": { "@id": "https://haltman.io/#org" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://enclosed.haltman.io/#app",
+        "name": "Haltman Enclosed",
+        "url": "https://enclosed.haltman.io/",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "description": "Send private and secure notes with a privacy-first design.",
+        "publisher": { "@id": "https://haltman.io/#org" }
+      }
+    ]
+  }
+  </script>
+</head>
+
+
+<body>
+  <!-- =========================================================================
+    Header / Navbar
+    - Sticky (not fixed) so it behaves like a normal website.
+    - Use aria-current="page" on the active link.
+  ========================================================================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <!-- Logo examples:
+          A) text only (default below)
+          B) inline SVG icon + text
+          C) image logo + text
+        -->
+        <a class="brand" href="/index.html">
+          <!-- B) Inline SVG icon example (uncomment if you want an icon)
+          <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2l7 4v6c0 5-3 9-7 10C8 21 5 17 5 12V6l7-4z"/>
+          </svg>
+          -->
+          <!-- C) Image logo example (uncomment if you have /assets/logo.svg)
+          <img class="brand__img" src="/assets/logo.svg" alt="Haltman logo" />
+          -->
+          <span class="brand__name">haltman</span>
+        </a>
+
+        <div class="nav__links">
+          <a class="nav__link" href="/index.html" aria-current="page">[home]</a>
+          <a class="nav__link" href="/about.html">[about]</a>
+          <a class="nav__link" href="https://blog.haltman.io/">[blog]</a>
+          <a class="nav__link" href="https://docs.haltman.io/knowledge-base/get-started">[docs]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <h1 class="hero__title">www.haltman.io</h1>
+        <p class="hero__kicker">(/) Homepage</p>
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> HOMEPAGE</h2>
+        <div class="prose">
+          <p><strong>Haltman.io</strong> is a group of <i>Brazilian</i> hackers.</p>
+          <p>Check <a href="/about.html">/about</a> to know more.</p>
+
+        </div>
+
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> LINKS</h2>
+        <div class="prose">
+          <ul class="list">
+            <li><a href="https://blog.haltman.io/">blog.haltman.io</a> <span class="u-muted">Our official blog for
+                sharing the news.</span></li>
+            <li><a href="https://docs.haltman.io/">docs.haltman.io</a> <span class="u-muted">Our official knowledge
+                base.</span></li>
+            <li><a href="https://github.com/haltman-io">github.com/haltman-io</a> <span class="u-muted">Our official
+                GitHub profile.</span></li>
+            <li><a href="https://t.me/haltman_group">t.me/haltman_group</a> <span class="u-muted">Our official Telegram
+                group.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> ACTIVE PROJECTS</h2>
+        <div class="prose">
+          <ul class="list">
+            <li><a href="https://forward.haltman.io/">Free Mail Forwarding</a> <span class="u-muted"># Fork from
+                thc.org/mail</span></li>
+            <li><a href="https://enclosed.haltman.io/">Free File/Notes Sharing</a> <span class="u-muted"># Enclosed
+                instance</span></li>
+            <li><a href="https://github.com/haltman-io/brave-search">Brave-Search</a> <span class="u-muted">CLI tool for
+                Brave Search API</span></li>
+            <li><a href="https://github.com/haltman-io/ip-thc">IP-THC</a> <span class="u-muted">CLI tool to perform
+                queries on over 4.7 billion mapped assets</span></li>
+            <li><a href="https://github.com/haltman-io/sub-alter">Sub-Alter</a> <span class="u-muted">CLI tool for
+                Domains/Subdomains Discovery</span></li>
+            <li><a href="https://github.com/haltman-io/reverse-whois">Reverse-Whois</a> <span class="u-muted">CLI tool
+                for Reverse WHOIS queries</span></li>
+            <li><a href="https://github.com/haltman-io/search-leaks">Search-Leaks</a> <span class="u-muted">CLI tool to
+                query data breach/leak statistics</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> CONTACT</h2>
+        <div class="prose">
+          <ul class="list">
+            <li>Email: <a href="mailto:root@haltman.io">root@haltman.io</a> OR <a
+                href="mailto:admin@haltman.io">admin@haltman.io</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> DISCLAIMER</h2>
+        <div class="callout">
+          <p class="callout__title">NOTICE</p>
+          <div class="prose">
+            <p>We do not consent to, participate in, promote, or consider illegal practices. We are not affiliated with
+              any other “hacker” group.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+    Footer
+    - No absolute positioning => never overlaps content on small screens.
+  ========================================================================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="u-mono">Powered by</span> <a href="https://www.haltman.io/">haltman.io</a>
+      <span class="u-muted"> • </span>
+      <span class="u-muted">🇧🇷</span>
+    </div>
+  </footer>
+</body>
+
+</html>

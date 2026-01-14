@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Haltman — Home</title>
+  <meta name="description" content="Haltman static template (landing page)." />
+
+  <!-- Theme -->
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0f0f10" />
+
+  <!-- Fonts (edit here if you want to swap the identity) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Outfit:wght@200..900&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <!-- =========================================================================
+    Header / Navbar
+    - Sticky (not fixed) so it behaves like a normal website.
+    - Use aria-current="page" on the active link.
+  ========================================================================= -->
+  <header class="site-header">
+    <div class="wrap">
+      <nav class="nav" aria-label="Primary">
+        <!-- Logo examples:
+          A) text only (default below)
+          B) inline SVG icon + text
+          C) image logo + text
+        -->
+        <a class="brand" href="./index.html">
+          <!-- B) Inline SVG icon example (uncomment if you want an icon)
+          <svg class="brand__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M12 2l7 4v6c0 5-3 9-7 10C8 21 5 17 5 12V6l7-4z"/>
+          </svg>
+          -->
+          <!-- C) Image logo example (uncomment if you have ./assets/logo.svg)
+          <img class="brand__img" src="./assets/logo.svg" alt="Haltman logo" />
+          -->
+          <span class="brand__name">haltman</span>
+        </a>
+
+        <div class="nav__links">
+          <a class="nav__link" href="./index.html" aria-current="page">[home]</a>
+          <a class="nav__link" href="./page.html" >[about]</a>
+          <a class="nav__link" href="./blog.html" >[blog]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <section class="hero">
+        <h1 class="hero__title">haltman.io</h1>
+        <p class="hero__kicker">A static, privacy-first, hacker-ish landing page template.</p>
+      </section>
+
+      <div class="hr"></div>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> HOMEPAGE</h2>
+        <div class="prose">
+          <p><strong>Haltman</strong> is a group of Brazilian hackers.</p>
+          <p class="muted">Replace this with your real intro: principles, scope, and what you actually ship.</p>
+          <p>Check <a href="./page.html">About</a> to know more.</p>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> ACTIVE PROJECTS</h2>
+        <div class="prose">
+          <ul class="list">
+            <li><a href="https://forward.haltman.io/">Free Mail Forwarding</a> <span class="u-muted"># Fork from thc.org/mail</span></li>
+            <li><a href="https://enclosed.haltman.io/">Free File/Notes Sharing</a> <span class="u-muted"># Enclosed instance</span></li>
+            <li><a href="#">Tool Name</a> <span class="u-muted"># short description</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> RESOURCES</h2>
+        <div class="prose">
+          <ul class="list">
+            <li>Email: <a href="mailto:root@haltman.io">root@haltman.io</a></li>
+            <li>GitHub: <a href="https://github.com/haltman-io">github.com/haltman-io</a></li>
+            <li>Telegram: <a href="https://t.me/haltman_channel">t.me/haltman_channel</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="hr"></div>
+
+      <section class="section">
+        <h2 class="section__head"><span class="section__marker">&gt;</span> DISCLAIMER</h2>
+        <div class="callout">
+          <p class="callout__title">NOTICE</p>
+          <div class="prose">
+            <p>We are not affiliated with any other “hacker” group.</p>
+            <p>We're just a closed group of friends who got together here.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- =========================================================================
+    Footer
+    - No absolute positioning => never overlaps content on small screens.
+  ========================================================================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <span class="u-mono">powered by</span> <a href="https://www.haltman.io/">haltman.io</a>
+      <span class="u-muted"> • </span>
+      <span class="u-muted">static template v1</span>
+    </div>
+  </footer>
+</body>
+</html>
